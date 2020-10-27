@@ -1,0 +1,152 @@
+    body {
+        margin: 0px 0px 0px;
+    }
+    .tout{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+        margin: 10px 0px 0px;
+        background-color: rgb(68, 0, 255);
+        display:flex;
+        justify-content: space-around;
+        height: 100px;
+    }
+    .button{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        margin: 8px 0px 0px;
+    }
+    #stopwatch{
+        margin:0px 0px 0px;
+    }
+    .glow-on-hover {
+        font-size: x-large;
+        width: 5%;
+        height: 4%;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: blue;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        animation: glowing 12s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    
+    .glow-on-hover:active {
+        color: #000
+    }
+    
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+    
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+    
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: blue;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    .wally1{
+        height: 60px;
+    }
+    .wally{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:white;
+    }
+    .odea1{
+        height: 60px;
+    }
+    .odea{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:white;
+    }
+    .wizard1{
+        height: 60px;
+    }
+    .wizard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color:white;
+    }
+    #waldo{
+        margin: 22px 0px 0px;
+        z-index: -1;
+    }
+    #checking{
+        position: absolute;
+        width: 105px;
+        margin:-18px 0px 0px;
+    }
+      @media only screen and (max-width:1500px){
+          .tout{
+              display: flex;
+              justify-content: center;
+          }
+        .navbar{
+            background-color: rgb(68, 0, 255);
+            display:flex;
+            justify-content: center;
+            justify-content: space-around;
+        }
+        .glow-on-hover{
+            width: 100px;
+        }
+        #waldo{
+            margin: 6px 0px 0px;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        .canvas{
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+        }
+        #stopwatch{
+            margin: -3px 0px 0px;
+        }
+      }
+      h1{
+          color:white
+      }
